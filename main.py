@@ -12,9 +12,9 @@ resolution = len(ASCIIscale)
 image = Image.open('image.png')
 
 width, height = image.size
-sw = 160
-sh = (height*sw)/width
-image = image.resize((int(sw), int(sh*(0.5))))
+sw = 140
+sh = (height*sw)/width*(8/12)*0.6
+image = image.resize((int(sw), int(sh)))
 
 grayscale = image.convert('L')
 matrix = np.array(grayscale)
